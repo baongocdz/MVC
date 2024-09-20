@@ -1,0 +1,74 @@
+﻿@model TH1.Models.Admin
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Admin</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="HoTenAdmin" class="control-label"></label>
+                <input asp-for="HoTenAdmin" class="form-control" />
+                <span asp-validation-for="HoTenAdmin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DiaChiAdmin" class="control-label"></label>
+                <input asp-for="DiaChiAdmin" class="form-control" />
+                <span asp-validation-for="DiaChiAdmin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DienThoaiAdmin" class="control-label"></label>
+                <input asp-for="DienThoaiAdmin" class="form-control" />
+                <span asp-validation-for="DienThoaiAdmin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TenDNAdmin" class="control-label"></label>
+                <input asp-for="TenDNAdmin" class="form-control" />
+                <span asp-validation-for="TenDNAdmin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatKhauAdmin" class="control-label"></label>
+                <input asp-for="MatKhauAdmin" class="form-control" />
+                <span asp-validation-for="MatKhauAdmin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NgaySinhAdmin" class="control-label"></label>
+                <input asp-for="NgaySinhAdmin" class="form-control" />
+                <span asp-validation-for="NgaySinhAdmin" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="GioiTinhAdmin" /> @Html.DisplayNameFor(model => model.GioiTinhAdmin)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailAdmin" class="control-label"></label>
+                <input asp-for="EmailAdmin" class="form-control" />
+                <span asp-validation-for="EmailAdmin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QuyenAdmin" class="control-label"></label>
+                <input asp-for="QuyenAdmin" class="form-control" />
+                <span asp-validation-for="QuyenAdmin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
